@@ -3,6 +3,7 @@ rem --------------------
 rem | File name  : dev-template-browsersync.bat
 rem | Author     : yama-dev - https://github.com/yama-dev
 rem | Repository : yama-dev - https://github.com/yama-dev/dev-template-browsersync
+rem | Version    : 1.1.0
 rem --------------------
 
 echo dev-template-browsersync.bat
@@ -41,13 +42,17 @@ echo;
 echo nodejsをインストールしてください。
 echo ↓↓↓
 echo 【nodejs】
-echo   https://nodejs.org/en/
+echo   https://nodejs.org/ja/
 echo;
 echo 【nodist】
 echo   https://github.com/marcelklehr/nodist/releases
 echo   ※Windowsの場合は「nodist」を利用するとバージョン管理が簡単です。
 echo ====================
-cmd /k
+timeout 1 >nul
+start https://nodejs.org/ja/
+timeout 2 >nul
+start https://github.com/marcelklehr/nodist/releases
+goto END
 
 :CHECK_NODEJS_END
 
